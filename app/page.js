@@ -886,7 +886,7 @@ const handleSubmit = async (e) => {
               </label>
 
               <input
-                className="w-full border-2 border-gray-300 rounded-xl p-4 mt-2 outline-none focus:border-blue-500"
+                className="w-full border-2 text-black border-gray-300 rounded-xl p-4 mt-2 outline-none focus:border-blue-500"
                 type="text"
                 name="name"
                 value={form.name}
@@ -903,7 +903,7 @@ const handleSubmit = async (e) => {
               </label>
 
               <input
-                className="w-full border-2 border-gray-300 rounded-xl p-4 mt-2 outline-none focus:border-blue-500"
+                className="w-full text-black border-2 border-gray-300 rounded-xl p-4 mt-2 outline-none focus:border-blue-500"
                 type="email"
                 name="email"
                 value={form.email}

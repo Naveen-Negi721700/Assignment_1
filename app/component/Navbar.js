@@ -61,7 +61,7 @@ const Navbar = () => {
             </Link>
 
             <Link href="#client" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
-              ITR Filing
+              TESTIMONIALS
             </Link>
 
             <Link href="#contact" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
@@ -132,7 +132,7 @@ const Navbar = () => {
           onClick={() => setMenuOpen(false)}
           className="font-bold text-black text-xl bg-white rounded-xl w-52 py-2 hover:text-blue-600 uppercase"
         >
-          ITR Filing
+           Testimonials
         </Link>
 
         <Link

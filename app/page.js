@@ -4,10 +4,15 @@ import { useState } from "react";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
 
 
 
 const Page = () => {
+
+  const router = useRouter();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -24,68 +29,72 @@ const Page = () => {
 
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // Validation
-  if (!form.name || !form.email || !form.query) {
-    toast.warning("Please fill all fields.", {
-      position: "top-right",
-      autoClose: 3000,
-      theme: "colored",
-    });
+    // Validation
+    if (!form.name || !form.email || !form.query) {
+      toast.warning("Please fill all fields.", {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "colored",
+      });
 
-    return;
-  }
+      return;
+    }
 
-  try {
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    console.log(data);
+      console.log(data);
+      router.push("/formSubmit");
+      toast.success("Thank you! We will contact you shortly.", {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "colored",
+      });
 
-    toast.success("Thank you! We will contact you shortly.", {
-      position: "top-right",
-      autoClose: 3000,
-      theme: "colored",
-    });
+      setForm({
+        name: "",
+        email: "",
+        query: "",
+      });
 
-    setForm({
-      name: "",
-      email: "",
-      query: "",
-    });
+      setTimeout(() => {
+        router.push("/formSubmit");
+      }, 2000);
 
-  } catch (error) {
-    console.log(error);
+    } catch (error) {
+      console.log(error);
 
-    toast.error("Failed to submit form.", {
-      position: "top-right",
-      autoClose: 3000,
-      theme: "colored",
-    });
-  }
-};
+      toast.error("Failed to submit form.", {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "colored",
+      });
+    }
+  };
   return (
     <>
-     <ToastContainer
-  position="top-right"
-  autoClose={3000}
-  hideProgressBar={false}
-  newestOnTop
-  closeOnClick
-  pauseOnFocusLoss
-  draggable
-  pauseOnHover
-  theme="colored"
-  transition={Bounce}
-/>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Bounce}
+      />
 
 
 
@@ -124,9 +133,9 @@ const Page = () => {
 
 
             <Link href={"#about"}>
-            <button className="mt-8 px-6 py-3 text-base sm:text-lg md:text-xl rounded-3xl font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-xl hover:text-black">
-              GET STARTED NOW
-            </button>
+              <button className="mt-8 px-6 py-3 text-base sm:text-lg md:text-xl rounded-3xl font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-xl hover:text-black">
+                GET STARTED NOW
+              </button>
             </Link>
           </div>
         </div>
@@ -222,7 +231,7 @@ const Page = () => {
 
 
 
-      {/* ================= ABOUT SECTION ================= */}
+      {/* ABOUT SECTION */}
 
       <section id='about' className="w-full min-h-screen bg-white text-black py-16 px-4 md:px-10 overflow-hidden">
 
@@ -344,7 +353,7 @@ const Page = () => {
 
 
 
-      {/* ================= SERVICES SECTION ================= */}
+      {/* SERVICES SECTION  */}
 
       <section id='service' className="w-full min-h-screen bg-white py-16 px-4 md:px-8 overflow-hidden">
 
@@ -365,7 +374,7 @@ const Page = () => {
           {/* Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mt-12">
 
-            {/* ================= Card 1 ================= */}
+            {/*  Card 1 */}
             <div className="bg-white text-black rounded-3xl shadow-xl border-2 border-black p-6 flex flex-col hover:scale-105 duration-300">
 
               {/* Image */}
@@ -405,7 +414,7 @@ const Page = () => {
               </div>
             </div>
 
-            {/* ================= Card 2 ================= */}
+            {/* Card 2  */}
             <div className="bg-white text-black rounded-3xl shadow-xl border-2 border-black p-6 flex flex-col hover:scale-105 duration-300">
 
               <div className="flex justify-center">
@@ -441,7 +450,7 @@ const Page = () => {
               </div>
             </div>
 
-            {/* ================= Card 3 ================= */}
+            {/* Card 3  */}
             <div className="bg-white text-black rounded-3xl shadow-xl border-2 border-black p-6 flex flex-col hover:scale-105 duration-300">
 
               <div className="flex justify-center">
@@ -477,7 +486,7 @@ const Page = () => {
               </div>
             </div>
 
-            {/* ================= Card 4 ================= */}
+            {/* Card 4 */}
             <div className="bg-white text-black rounded-3xl shadow-xl border-2 border-black p-6 flex flex-col hover:scale-105 duration-300">
 
               <div className="flex justify-center">
@@ -526,26 +535,7 @@ const Page = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* ================= TESTIMONIAL SECTION ================= */}
+      {/* TESTIMONIAL SECTION  */}
 
       <section id='client' className="w-full bg-white py-16 px-4 overflow-hidden">
 
@@ -573,7 +563,7 @@ const Page = () => {
             {/* Testimonial Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
 
-              {/* ================= Card 1 ================= */}
+              {/*  Card 1  */}
               <div className="bg-white rounded-3xl p-6 text-center shadow-2xl">
 
                 {/* Quote Icon */}
@@ -585,12 +575,11 @@ const Page = () => {
                   />
                 </div>
 
-                {/* Review */}
                 <h2 className="text-2xl font-bold mt-4 text-black">
                   JMP made ITR filing easy!
                 </h2>
 
-                {/* Stars */}
+                
                 <div className="flex justify-center mt-4 gap-1">
 
                   <img
@@ -644,8 +633,7 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-
-              {/* ================= Card 2 ================= */}
+{/* CARD 2  */}
               <div className=" relative bg-white rounded-3xl p-6 text-center shadow-2xl">
 
                 <div className="flex justify-center">
@@ -735,9 +723,9 @@ const Page = () => {
 
             </div>
 
-            {/* ================= OUR CLIENTS ================= */}
+            {/* OUR CLIENTS */}
 
-            <div className=" rounded-3xl mt-10 absolute bg-white md:p-8 p-1 lg:w-[94%] 2xl:w-[97%]  w-[90%] md:w-[91%] ">
+            <div className=" rounded-3xl mt-10 bottom-5 absolute bg-white md:p-8 p-1 lg:w-[94%] 2xl:w-[97%]  w-[90%] md:w-[91%] ">
 
               <h2 className="text-3xl md:text-5xl font-bold text-center text-black">
                 OUR CLIENTS
@@ -831,7 +819,7 @@ const Page = () => {
 
 
 
-      {/* <d================= CONTACT SECTION ================= */}
+   {/* CONTACT SECTION  */}
 
       <section id='contact' className="w-full bg-white py-16 px-4 ">
 
@@ -860,8 +848,7 @@ const Page = () => {
             <div className="flex justify-center mt-20">
 
               <div className="w-full max-w-7xl bg-white rounded-3xl shadow-2xl p-6 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
-
-                {/* ================= LEFT SIDE ================= */}
+{/* LEFT SIDE FORM  */}
                 <div className="text-black">
 
                   <h2 className="text-2xl md:text-3xl font-bold">
@@ -911,8 +898,7 @@ const Page = () => {
 
                   </div>
                 </div>
-
-                {/* ================= RIGHT SIDE FORM ================= */}
+{/* RIGHT SIDE FORM  */}
                 <form
                   onSubmit={handleSubmit}
                   className="flex flex-col gap-6"
@@ -974,9 +960,10 @@ const Page = () => {
                   {/* Button */}
                   <div className="flex justify-center lg:justify-start">
 
+
                     <button
                       type="submit"
-                      className="px-8 py-3 rounded-full font-bold text-white text-lg bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-xl hover:text-black"
+                      className="px-8 py-3 rounded-full font-bold text-white text-lg bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-black transition-all"
                     >
                       Submit Now
                     </button>

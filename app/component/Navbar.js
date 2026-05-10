@@ -48,27 +48,27 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
 
-            <Link href="#home" className="font-bold text-slate-800 hover:text-blue-600 uppercase">
+            <Link href="#home" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               Home
             </Link>
 
-            <Link href="#about" className="font-bold text-slate-800 hover:text-blue-600 uppercase">
+            <Link href="#about" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               About Us
             </Link>
 
-            <Link href="#service" className="font-bold text-slate-800 hover:text-blue-600 uppercase">
+            <Link href="#service" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               Services
             </Link>
 
-            <Link href="#client" className="font-bold text-slate-800 hover:text-blue-600 uppercase">
+            <Link href="#client" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               ITR Filing
             </Link>
 
-            <Link href="#company" className="font-bold text-slate-800 hover:text-blue-600 uppercase">
+            <Link href="#contact" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               Company Registration
             </Link>
 
-            <Link href="#contact" className="font-bold text-slate-800 hover:text-blue-600 uppercase">
+            <Link href="#contact" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               Contact
             </Link>
 
@@ -136,7 +136,7 @@ const Navbar = () => {
         </Link>
 
         <Link
-          href="#company"
+          href="#contact"
           onClick={() => setMenuOpen(false)}
           className="font-bold text-black text-xl bg-white rounded-xl w-52 py-2 hover:text-blue-600 uppercase"
         >

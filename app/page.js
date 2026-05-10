@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from "react";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Link from 'next/link';
 
 
 
@@ -120,9 +121,13 @@ const Page = () => {
               We simplify Company Registration and ITR Filing for you.
             </p>
 
-            <button className="mt-8 px-6 py-3 text-base sm:text-lg md:text-xl rounded-3xl font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300">
+
+
+            <Link href={"#about"}>
+            <button className="mt-8 px-6 py-3 text-base sm:text-lg md:text-xl rounded-3xl font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-xl hover:text-black">
               GET STARTED NOW
             </button>
+            </Link>
           </div>
         </div>
 
@@ -394,7 +399,7 @@ const Page = () => {
 
               {/* Button */}
               <div className="flex justify-center mt-6">
-                <button className="px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300">
+                <button className="px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-xl hover:text-black">
                   Get Quote
                 </button>
               </div>
@@ -430,7 +435,7 @@ const Page = () => {
               </div>
 
               <div className="flex justify-center mt-6">
-                <button className="px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300">
+                <button className="px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-xl hover:text-black">
                   Get Quote
                 </button>
               </div>
@@ -466,7 +471,7 @@ const Page = () => {
               </div>
 
               <div className="flex justify-center mt-6">
-                <button className="px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300">
+                <button className="px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-xl hover:text-black">
                   Get Quote
                 </button>
               </div>
@@ -502,7 +507,7 @@ const Page = () => {
               </div>
 
               <div className="flex justify-center mt-6">
-                <button className="px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300">
+                <button className="px-6 py-3 rounded-full font-bold text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-xl hover:text-black">
                   Get Quote
                 </button>
               </div>
@@ -971,7 +976,7 @@ const Page = () => {
 
                     <button
                       type="submit"
-                      className="px-8 py-3 rounded-full font-bold text-white text-lg bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300"
+                      className="px-8 py-3 rounded-full font-bold text-white text-lg bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-xl hover:text-black"
                     >
                       Submit Now
                     </button>

@@ -31,14 +31,17 @@ const Navbar = () => {
               <div>
                 <span className="text-2xl font-black text-slate-900 tracking-tighter">
                   JMP
+                  
                 </span>
 
                 <span className="text-2xl font-bold text-blue-600 tracking-tighter">
                   GLOBAL
+
                 </span>
 
                 <div className="text-[10px] font-bold tracking-[0.2em] text-slate-500 leading-none uppercase">
                   Services
+
                 </div>
               </div>
 
@@ -50,27 +53,33 @@ const Navbar = () => {
 
             <Link href="#home" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               Home
+
             </Link>
 
             <Link href="#about" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               About Us
+
             </Link>
 
             <Link href="#service" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               Services
+
             </Link>
 
             <Link href="#client" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               TESTIMONIALS
+
             </Link>
 
             <Link href="#contact" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               Company Registration
+
             </Link>
 
             <Link href="#contact" className="font-bold text-slate-800 hover:bg-[#181818] p-2 m-2 hover:rounded-2xl hover:text-bold hover:text-blue-600 uppercase">
               Contact
-            </Link>
+
+            </Link> 
 
           </div>
 

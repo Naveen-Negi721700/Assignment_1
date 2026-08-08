@@ -843,6 +843,8 @@ const Page = () => {
           <div className="absolute inset-0 bg-black/50"></div>
 
           {/* Content */}
+
+          
           <div className="absolute inset-0 px-4 md:px-10 py-10">
 
             {/* Heading */}
@@ -979,7 +981,11 @@ const Page = () => {
 
               </div>
             </div>
-          </div>
+          </div>              
+
+
+
+
         </div>
       </section>
 

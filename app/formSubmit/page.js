@@ -1,8 +1,13 @@
-import React from 'react'
+// it is a  form sumit containt 
+
+
+ import React from 'react'
 import Link from 'next/link'
 
 const FormSummiting = () => {
   return (
+
+    
       <div className="min-h-screen flex items-center justify-center bg-slate-950 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)] px-4">
       
       {/* Main Card */}

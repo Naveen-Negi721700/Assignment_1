@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Footer = () => {
-  return (
+  return (         
     // <!-- JMD Global Services Footer -->
 <footer className="bg-slate-900 text-white pt-16 pb-8 px-6">
   <div className="max-w-7xl mx-auto">

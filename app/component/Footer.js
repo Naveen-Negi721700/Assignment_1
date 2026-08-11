@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
       
       {/* <!-- Company Info --> */}
-      <div className="space-y-4">
+      <div className="space-y-4">                      
         <div className="flex flex-col">
           <div className="flex items-center gap-1">
             <span className="text-2xl font-black text-white tracking-tighter">JMP</span>
@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
           <span className="text-[10px] font-bold tracking-[0.2em] text-slate-400 leading-none uppercase">
             Services
-          </span>
+          </span>                     
         </div>
         <p className="text-slate-400 text-sm leading-relaxed">
           Your comprehensive business growth partner in compliance and innovation. Providing expert legal and digital solutions since inception.

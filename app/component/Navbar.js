@@ -88,7 +88,7 @@ const Navbar = () => {
             onClick={() => setMenuOpen(!menuOpen)}
             className="lg:hidden flex flex-col gap-1"
           >
-
+                                                   
             <div className="w-6 h-0.5 bg-black"></div>
             <div className="w-6 h-0.5 bg-black"></div>
             <div className="w-6 h-0.5 bg-black"></div>

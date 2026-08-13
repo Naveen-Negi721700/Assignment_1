@@ -6,5 +6,5 @@ const ContactSchema = new mongoose.Schema({
   query: String,
 });
 
-export default mongoose.models.Contact ||
+export default mongoose.models.Contact ||    
   mongoose.model("Contact", ContactSchema);        

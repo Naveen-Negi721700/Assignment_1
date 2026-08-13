@@ -2,7 +2,7 @@ import connectDB from "@/lib/mongodb";
 import Contact from "@/models/Contact";
 
 export async function POST(req) {
-  try {
+  try {                        
     await connectDB();
 
     const body = await req.json();

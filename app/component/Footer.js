@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer = () => {                          
   return (         
     // <!-- JMD Global Services Footer -->
 <footer className="bg-slate-900 text-white pt-16 pb-8 px-6">

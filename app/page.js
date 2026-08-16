@@ -973,7 +973,7 @@ const Page = () => {
                       type="submit"
                       className="px-8 py-3 rounded-full font-bold text-white text-lg bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-105 duration-300 hover:text-black transition-all"
                     >
-                      Submit Now
+                      Submit Now 
                     </button>
                   </div>
 

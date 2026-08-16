@@ -9,7 +9,7 @@ const Footer = () => {
       
       {/* <!-- Company Info --> */}
       <div className="space-y-4">                              
-        <div className="flex flex-col">        
+        <div className="flex flex-col">                 
           <div className="flex items-center gap-1"> 
             <span className="text-2xl font-black text-white tracking-tighter">JMP</span>
             <span className="text-2xl font-bold text-blue-400 tracking-tighter">GLOBAL</span>
@@ -17,11 +17,11 @@ const Footer = () => {
           <span className="text-[10px] font-bold tracking-[0.2em] text-slate-400 leading-none uppercase">
             Services
           </span>                     
-        </div>
+        </div>      
         <p className="text-slate-400 text-sm leading-relaxed">
           Your comprehensive business growth partner in compliance and innovation. Providing expert legal and digital solutions since inception.
         </p>
-      </div>
+      </div>     
 
       {/* <!-- Quick Links --> */}
       <div>

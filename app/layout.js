@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
                                 
 export const metadata = {
-  title: "JMD Global Services",
-  description: "Company Registration and Compliance Experts Delhi",
+  title: "JMD Global Services", 
+  description: "Company Registration  and Compliance Experts Delhi",
 };
 
 export default function RootLayout({ children }) {

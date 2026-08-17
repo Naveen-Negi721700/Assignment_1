@@ -6,7 +6,7 @@ const Footer = () => {
 <footer className="bg-slate-900 text-white pt-16 pb-8 px-6">
   <div className="max-w-7xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-      
+           
       {/* <!-- Company Info --> */}
       <div className="space-y-4">                              
         <div className="flex flex-col">                 

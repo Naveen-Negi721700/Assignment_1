@@ -976,10 +976,10 @@ const Page = () => {
                       Submit Now 
                     </button>
                   </div>
-
+                                   
                 </form>                                
 
-              </div>    
+              </div>     
             </div>
           </div>              
 
